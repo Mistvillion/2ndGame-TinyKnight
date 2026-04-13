@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8coqq3va06jb"]
 
-[ext_resource type="Script" uid="uid://c0scb451mjg2v" path="res://scenes/menu.gd" id="1_yqeox"]
+[ext_resource type="Script" uid="uid://c0scb451mjg2v" path="res://scripts/menu.gd" id="1_yqeox"]
 [ext_resource type="FontFile" uid="uid://brmpogw7iw3ws" path="res://assets/fonts/PixelOperator8.ttf" id="2_vjb58"]
 
 [node name="Menu" type="Control" unique_id=1542952124]
