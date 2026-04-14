@@ -55,24 +55,23 @@ Platformer-bundle/
 |- assets/                 美术、字体、音乐、音效资源
 |  |- fonts/
 |  |- music/
-|  `- sounds/
+|  |- sounds/
 |- scenes/                 场景与部分场景脚本
 |  |- menu.tscn            主菜单
 |  |- game.tscn            主关卡
 |  |- player.tscn          玩家场景
 |  |- coin.tscn            金币场景
 |  |- slime.tscn           敌人场景
-|  |- platform.tscn        平台场景
 |  |- killzone.tscn        死亡区域
-|  |- game_manager.gd      分数与界面管理
-|  |- menu.gd              菜单逻辑
-|  `- slime.gd             敌人巡逻逻辑
 |- scripts/                复用脚本
 |  |- player.gd            玩家移动与跳跃逻辑
 |  |- coin.gd              金币拾取逻辑
-|  `- killzone.gd          死亡与重生逻辑
+|  |- game_manager.gd      分数与界面管理
+|  |- menu.gd              菜单逻辑
+|  |- slime.gd             敌人巡逻逻辑
+|  |- killzone.gd          死亡与重生逻辑
 |- project.godot           Godot 项目配置
-`- export_presets.cfg      导出配置
+|- export_presets.cfg      导出配置
 ```
 
 ## 核心脚本说明
