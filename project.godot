@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Platformer-bundle"
+config/name="TinyKnight"
 run/main_scene="uid://8coqq3va06jb"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
@@ -22,6 +22,11 @@ buses/default_bus_layout="uid://dlmkkvmj4reum"
 [autoload]
 
 BackgroundMusic="*uid://gr6flrkrremn"
+
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
 
 [input]
 
