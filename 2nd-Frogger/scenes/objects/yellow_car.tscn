@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ded8huv3lr1a7" path="res://assets/graphics/cars/yellow.png" id="1_o7jgv"]
 [ext_resource type="Script" uid="uid://cbvw8nabcfsuy" path="res://scripts/objects/yellow_car.gd" id="1_omtpy"]
+[ext_resource type="AudioStream" uid="uid://dun1pp4e1l5py" path="res://assets/audio/car.mp3" id="3_khprx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_omtpy"]
 size = Vector2(24, 15)
@@ -17,3 +18,10 @@ texture = ExtResource("1_o7jgv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1989682098]
 position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_omtpy")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1950727811]
+stream = ExtResource("3_khprx")
+volume_db = -20.0
+autoplay = true
+max_distance = 100.0
+parameters/looping = true

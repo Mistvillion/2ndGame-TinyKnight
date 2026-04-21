@@ -36,11 +36,16 @@ func _on_car_timer_timeout() -> void:
 	# 当触发信号时，会自动调用函数，并传一个Node2D类型的参数body
 	car.connect("body_entered", game_over)
 
-
-func game_over(body) -> void:
-	print("你碰到了车，游戏结束")
-
+func game_over(_body) -> void:
+	call_deferred("change_scene")
 
 func _on_score_timer_timeout() -> void:
 	score += 1
 	$CanvasLayer/Label.text = str(score)
+
+func _on_finish_area_body_entered(_body: Node2D) -> void:
+	call_deferred("change_scene")
+	Global.score = score
+
+func change_scene():
+	get_tree().change_scene_to_file("res://scenes/title.tscn")

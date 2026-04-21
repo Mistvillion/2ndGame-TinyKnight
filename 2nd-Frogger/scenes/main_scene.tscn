@@ -19,6 +19,9 @@ size = Vector2(497, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18nlu"]
 size = Vector2(487, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1pb6"]
+size = Vector2(470, 128)
+
 [node name="MainScene" type="Node2D" unique_id=132302733]
 script = ExtResource("1_gubc5")
 metadata/_edit_lock_ = true
@@ -31,6 +34,7 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=337116899 instance=ExtResource("2_7ykc4")]
 position = Vector2(222, 325)
+collision_mask = 29
 
 [node name="Objects" type="Node" parent="." unique_id=500041815]
 
@@ -136,5 +140,14 @@ text = "0
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="FinishArea" type="Area2D" parent="." unique_id=1127068961]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishArea" unique_id=1655936237]
+position = Vector2(235, 64)
+shape = SubResource("RectangleShape2D_c1pb6")
+
 [connection signal="timeout" from="Timer/CarTimer" to="." method="_on_car_timer_timeout"]
 [connection signal="timeout" from="Timer/ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="body_entered" from="FinishArea" to="." method="_on_finish_area_body_entered"]
